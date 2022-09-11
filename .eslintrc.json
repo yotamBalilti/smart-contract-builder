@@ -1,0 +1,43 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true
+	},
+	"rules": {
+		"no-console": "warn",
+		"import/order": "error",
+		"react/prop-types": "off",
+		"react/react-in-jsx-scope": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-unused-vars": ["warn"],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-empty-function": "off",
+		"no-empty-function": "off"
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:import/recommended",
+		"plugin:import/typescript",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"root": true,
+	"plugins": ["react", "@typescript-eslint", "import"],
+	"parserOptions": {
+		"ecmaVersion": 11,
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"project": ["./tsconfig.json", "./cypress/tsconfig.json", "./cdk/tsconfig.json"]
+	},
+	"settings": {
+		"react": {
+			"pragma": "React",
+			"version": "detect"
+		}
+	}
+}
